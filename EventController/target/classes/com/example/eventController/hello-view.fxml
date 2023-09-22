@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.25, 0.5" prefHeight="320.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventController.HelloController">
+   <VBox prefHeight="318.0" prefWidth="316.0">
+      <Label text="Мои мероприятия">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label text="Участник" />
+      <ListView fx:id="userEventsGuestList" prefWidth="200.0" />
+      <Label text="Оборудование" />
+      <ListView fx:id="userEventsEquipmentList" layoutX="10.0" layoutY="27.0" prefWidth="200.0" />
+   </VBox>
+   <VBox prefHeight="200.0" prefWidth="100.0">
+      <Label text="Мероприятия" />
+      <ListView fx:id="eventsList" prefWidth="200.0" />
+      <Button mnemonicParsing="false" onAction="#createEvent" text="Создать мероприятие" />
+   </VBox>
+   <VBox prefHeight="200.0" prefWidth="100.0">
+      <Label text="Название" />
+      <TextField fx:id="eventTitleText" editable="false" />
+      <Label text="Место" />
+      <TextField fx:id="eventPlaceText" editable="false" />
+      <Label text="Дата" />
+      <TextField fx:id="eventDateText" editable="false" />
+      <Label text="Требуемые участники" />
+      <HBox>
+         <ListView fx:id="guestsList" prefHeight="200.0" prefWidth="200.0" />
+         <Button mnemonicParsing="false" onAction="#goToEvent" text="Записаться" />
+      </HBox>
+      <Label layoutX="10.0" layoutY="178.0" text="Требуемое оборудование" />
+      <HBox>
+         <ListView fx:id="equipmentList" prefHeight="200.0" prefWidth="200.0" />
+         <VBox>
+            <Label text="Количество" />
+            <Slider fx:id="equipmentCountText" blockIncrement="1.0" max="10.0" min="1.0" showTickLabels="true" value="1.0" />
+            <Button mnemonicParsing="false" onAction="#equipForEvent" text="Записаться" />
+         </VBox>
+      </HBox>
+   </VBox>
+</SplitPane>

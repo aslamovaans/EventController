@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane prefHeight="202.0" prefWidth="296.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.volonterhelper.AuthController">
+   <items>
+      <VBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="234.0">
+         <Label text="Имя" />
+         <TextField fx:id="nameText" />
+         <Label text="Пароль" />
+         <TextField fx:id="passwordText" />
+         <Button defaultButton="true" mnemonicParsing="false" onAction="#login" text="Войти" />
+         <Label layoutX="99.0" layoutY="52.0" text="Телефон" />
+         <TextField fx:id="phoneText" layoutX="10.0" layoutY="69.0" />
+         <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" text="Зарегистрироваться" />
+      </VBox>
+   </items>
+</SplitPane>

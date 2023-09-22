@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="468.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventController.CreatingController">
+   <Label text="Название" />
+   <TextField fx:id="titleText" />
+   <Label text="Место" />
+   <TextField fx:id="locationText" />
+   <Label text="Дата и время" />
+   <DatePicker fx:id="dateText" />
+   <Label text="Список оборудования" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <ListView fx:id="equipmentList" prefHeight="200.0" prefWidth="200.0" />
+      <VBox>
+         <Label text="Название" />
+         <TextField fx:id="equipmentTitleText" />
+         <Label text="Количество" />
+         <Slider fx:id="equipmentCountText" blockIncrement="1.0" max="10.0" min="1.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+         <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <Button mnemonicParsing="false" onAction="#addEquipment" text="Добавить" />
+            <Button mnemonicParsing="false" onAction="#deleteEquipment" text="Удалить" />
+         </ToolBar>
+      </VBox>
+   </HBox>
+   <Label layoutX="10.0" layoutY="136.0" text="Список участников" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <ListView fx:id="guestList" prefHeight="200.0" prefWidth="200.0" />
+      <VBox>
+         <Label text="Описание" />
+         <TextArea fx:id="guestDescriptionText" prefHeight="200.0" prefWidth="200.0" />
+         <Label text="Количество" />
+         <Slider fx:id="guestCountText" blockIncrement="1.0" max="50.0" min="1.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+         <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <Button mnemonicParsing="false" onAction="#addGuest" text="Добавить" />
+            <Button mnemonicParsing="false" onAction="#deleteGuest" text="Удалить" />
+         </ToolBar>
+      </VBox>
+   </HBox>
+   <Button mnemonicParsing="false" onAction="#create" text="Создать" />
+
+</VBox>
